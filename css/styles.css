@@ -68,16 +68,13 @@ form {
 .form-fieldset {
   border: none;
   text-align: left;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 1em 0 1em 0;
 }
 
 .form-title {
   color: #22313F;
   font-size: 1.3rem;
   font-weight: bold;
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 
 label {
@@ -86,18 +83,21 @@ label {
 }
 
 ::placeholder {
-  color: #C0C0C0;
+  color: #A9A9A9;
   font-style: italic;
   text-align: right;
 }
 
-input[type="number"]::placeholder {
-  color: #C0C0C0;
-  text-align: left;
+.contact {
+  background: #f3f1ef;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 2em;
+  padding: 3px;
 }
 
 .form-input {
-  background: #ECECEC;
+  background: #DCDCDC;
   border: none;
   border-radius: 5px;
   margin-bottom: 1em;
@@ -118,15 +118,14 @@ input[type="number"]::placeholder {
 }
 
 .newsletter {
-  background: #F5F5F5;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
+  padding: 5px;
 }
 
 .newsletter-title {
   border-top: 2px solid #22313F;
-  padding-top: 2em;
+  padding-top: 1em;
   width: 100%;
 }
 
@@ -160,9 +159,13 @@ input[type="radio"] {
 }
 
 .message {
-  background: #ECECEC;
+  background: #EEE;
   border: none;
   width: 100%;
+}
+
+.message::placeholder {
+  text-align: left;
 }
 
 .btn {
@@ -200,7 +203,7 @@ input[type="radio"] {
   .form-row {
     align-items: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 1em;
   }
 
@@ -211,13 +214,27 @@ input[type="radio"] {
 
   label {
     color: #22313F;
+    flex-basis: 40%;
   }
 
   .form-input {
-    flex-basis: 70%;
+    flex-basis: 60%;
   }
 
   #zip {
-    flex-basis: 75px;
+    flex-basis: 20%;
   }
+
+  .contact {
+    margin-top: 2.5em;
+  }
+
+  .newsletter-title {
+    padding-top: 1.5em;
+  }
+
+  .btn:hover {
+    opacity: .7;
+  }
+
 }
